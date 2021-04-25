@@ -1,7 +1,7 @@
 # MCBoxA
 MCBoxA - Move Chromeboxes Automatically
 
-MCBoxA was developed to support automatic relocation of Chromeboxes. MCBoxA has an overview of every Chromebox' serial number, most recent user, where it is located (Device_OU) and where the most recent user is located (MRU_OU). It uses GAMADV-XTD3 to push fresh data to the two sheets Devices & Users, and then uses a number of formulas to calculate their current relationship, and decide what to do with the devices.						
+MCBoxA was developed to support automatic relocation of Chromeboxes. MCBoxA has an overview of every Chromebox' serial number, most recent user, where it is located (Device_OU) and where the most recent user is located (MRU_OU). It uses [GAMADV-XTD3](https://github.com/taers232c/GAMADV-XTD3) to push fresh data to the two sheets Devices & Users, and then uses a number of formulas to calculate their current relationship, and decide what to do with the devices.						
 
 I definitely recommend you read the contents of the scripts before running any functions. If for nothing else at least so you know it looks like it'll only do what I say.
 
@@ -34,9 +34,8 @@ You need to replace the FileID with your copy of the Sheet, and reference a user
 
 Do note that I am excluding some users (IT staff who often touch student devices, and therefore MCBoxA shouldn't move those devices), and devices in some OU paths shouldn't be moved (where we keep Disabled & Deprovisioned devices). Also note that I deliberately refer to the TEST tab, so you don't accidentally run on your entire device population. Change that to MCBoxA when you're good and ready.
 
-## PRIVACY POLICY
+[PRIVACY POLICY](https://tools.no-substitute.com/pp)
 
-**You are in full control of all the data. The script is only accessing data you yourself have access to. No data is sent anywhere, except between you and Google. No matter if you create a copy of my Sheet or my scripts, I will never gain access to any of your data. All data reading and writing is done by you on your own account.**
+tl;dr - No data is sent anywhere, except between you and Google.
 
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/NoSubstitute)
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/NoSubstitute/25USD)
