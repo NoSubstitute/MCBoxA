@@ -1,7 +1,7 @@
 # MCBoxA
 MCBoxA - Move Chromeboxes Automatically
 
-MCBoxA was developed to support automatic relocation of Chromeboxes. MCBoxA has an overview of every Chromebox' serial number, most recent user, where it is located (Device_OU) and where the most recent user is located (MRU_OU). It uses [GAMADV-XTD3](https://github.com/taers232c/GAMADV-XTD3) to push fresh data to the two sheets Devices & Users, and then uses a number of formulas to calculate their current relationship, and decide what to do with the devices.						
+MCBoxA was developed to support automatic relocation of Chromeboxes. MCBoxA has an overview of every Chromebox' serial number, most recent user, where it is located (Device_OU) and where the most recent user is located (MRU_OU). It uses [GAM7](https://github.com/GAM-team/GAM) or [GAMADV-XTD3](https://github.com/taers232c/GAMADV-XTD3) to push fresh data to the two sheets Devices & Users, and then uses a number of formulas to calculate their current relationship, and decide what to do with the devices.						
 
 I definitely recommend you read the contents of the scripts before running any functions. If for nothing else at least so you know it looks like it'll only do what I say.
 
@@ -27,7 +27,7 @@ Upload user data to the sheet/tab _Users_ - again you need to replace the FileID
 
 Do note that I am here only pulling users from the OUs that contain the words _Students_ and _Staff_.
 
-### GAMADV-XTD3 command to Move Chromeboxes
+### GAM command to Move Chromeboxes
 You need to replace the FileID with your copy of the Sheet, and reference a user with access to read the Sheet.
 
 ```gam config csv_input_row_filter "'^STATUS$:regex:^ROOT$|^MISMATCH A$|^MATCH SCHOOL$|^SAME$'" csv_input_row_drop_filter "'^recentUsers.email$:regex:^ExcludeThis.User@YouDomain.com$|^AlsoExcludeThis.User@YouDomain.com$','^orgUnitPath$:regex:ADMINS|SIGN|DISABLED|DEPROVISIONED','^MRU_OU$:regex:^$'" redirect stdout ./logfile.log multiprocess redirect stderr stdout csv gsheet UserWith.AccessToSheet@Yourdomain.com ReplaceWithYourFileID TEST gam cros_sn "~serialNumber" update ou "~USER2CBOX_OU" assetid "MCBoxA $(date +'%Y-%m-%d %H:%M')"```
