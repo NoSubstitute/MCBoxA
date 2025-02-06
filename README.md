@@ -15,7 +15,7 @@ Click the link with your Chromebook admin (often superadmin) account.
 
 All headers have small comments on what you can do and shouldn't.
 
-### GAMADV-XTD3 commands to upload the Device & User data to the Sheet.
+### GAM commands to upload the Device & User data to the Sheet.
 
 Upload device data to the sheet/tab called _Chromeboxes_ - you need to replace the FileID with your copy of the Sheet
 
